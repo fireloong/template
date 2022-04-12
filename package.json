@@ -1,38 +1,55 @@
 {
   "name": "base-template",
+  "private": true,
   "version": "0.0.0",
   "description": "项目基本模板",
   "main": "src/main.ts",
   "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
     "lint": "npm run lint:tsc && eslint --ext .ts,.tsx ./ --max-warnings 0",
     "lint:fix": "eslint --ext .ts ./ --max-warnings 0 --fix",
     "lint:tsc": "tsc --emitDeclarationOnly",
     "release": "standard-version",
     "prepare": "husky install"
   },
-  "lint-staged": {
-    "src/**/*.{ts,tsx}": [
-      "prettier --write",
-      "npm run lint:fix"
-    ]
+  "dependencies": {
+    "vue": "^3.2.32"
   },
-  "author": "",
-  "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
     "@typescript-eslint/eslint-plugin": "^5.19.0",
     "@typescript-eslint/parser": "^5.19.0",
+    "@vitejs/plugin-vue": "^2.3.1",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.13.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint": "^8.13.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.6.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.7",
     "prettier": "^2.6.2",
     "standard-version": "^9.3.2",
-    "typescript": "^4.6.3"
+    "typescript": "^4.6.3",
+    "vite": "^2.9.1",
+    "vue-tsc": "^0.34.6"
+  },
+  "author": "",
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "prettier --write",
+      "npm run lint:fix"
+    ]
   }
 }
