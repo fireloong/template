@@ -1,9 +1,7 @@
 {
   "name": "base-template",
-  "private": true,
   "version": "0.0.0",
   "description": "项目基本模板",
-  "main": "src/main.ts",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
@@ -19,8 +17,6 @@
     "vue-router": "^4.0.14"
   },
   "devDependencies": {
-    "@babel/types": "^7.17.0",
-    "@babel/eslint-parser": "^7.17.0",
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
     "@typescript-eslint/eslint-plugin": "^5.19.0",
