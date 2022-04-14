@@ -1,6 +1,5 @@
 module.exports = { extends: ['@commitlint/config-conventional'] };
 
-
 /**
  * build : 改变了build工具 如 webpack
  * ci : 持续集成新增
